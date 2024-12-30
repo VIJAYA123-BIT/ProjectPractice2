@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Calculator">
+        <div class ='slds-var-m-around_medium'>
+            <lightning-input type="number" value={Num1} label="Enter the number" onchange={number1}></lightning-input>
+            <lightning-input type="number" value={Num2} label="Enter the number" onchange={number2}></lightning-input><br>
+            <lightning-button variant="brand" label="+" class="slds-m-left_x-small" onclick={AddHandler} ></lightning-button>
+            <lightning-button variant="brand" label="-" class="slds-m-left_x-small" onclick={subHandler} ></lightning-button>
+            <lightning-button variant="brand" label="*" class="slds-m-left_x-small" onclick={MulHandler} ></lightning-button>
+            <lightning-button variant="brand" label="/" class="slds-m-left_x-small" onclick={DivHandler} ></lightning-button>
+            <p if:true={oper}>The selected operation is {operation}</p>
+            <lightning-input type="number" value={result} label="Result"></lightning-input><br>
+            <lightning-button variant="brand" label="reset" class="slds-m-left_x-small" onclick={resetHandler} ></lightning-button>
+
+        </div>
+    </lightning-card>
+    
+</template>

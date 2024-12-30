@@ -1,0 +1,11 @@
+{
+   attributes: {
+      name: URL_Test_Page__c
+   },
+   state: {
+      lang: en_US,
+      type: test-type,
+      id: 000000000001
+   },
+   type: comm__namedPage
+}

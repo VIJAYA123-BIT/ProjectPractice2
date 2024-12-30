@@ -1,0 +1,16 @@
+<template>
+    <lightning-modal-header label="Change Owner"></lightning-modal-header>   
+        <lightning-record-edit-form record-id={recordId} object-api-name={objectApiName}>
+            <div class="slds-m-around_medium"> 
+                <lightning-input type="text" value={searchKey} onchange={InputHandler} ></lightning-input>
+                <p>Search in:</p>
+                <lightning-radio-group options={options} value={selectValue} onchange={handleChange}></lightning-radio-group>
+                <p>Selected Values are: {selectValue}</p>
+                <lightning-datatable key-field="id" columns={columns} onrowaction={handleRowAction} data={usersData} onclick={currentPageReference}></lightning-datatable>
+                <div class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="Cancel" ></lightning-button>
+                </div>
+            </div>  
+    </lightning-record-edit-form>
+
+</template>

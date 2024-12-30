@@ -1,0 +1,45 @@
+<template>
+    <lightning-button label="Create Product" onclick={handleCreateProduct}></lightning-button>
+    <lightning-card>
+        <div class="slds-var-m-around_medium">
+            <!-- <div style="height: 300px;"> -->
+            <lightning-datatable key-field="id" data={ProdValues} columns={cols}>
+            </lightning-datatable>
+            <!-- </div> -->
+        </div>
+    </lightning-card>
+    <template if:true={HandleCreate}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+            class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">New Product</h1>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning-input type="text"  label="Product Name" required="Product Name" value={ProductName} onchange={InputHandler}></lightning-input><br>
+                    <lightning-input type="text"  label="Product Code"  value={ProductCode} onchange={InputHandler1}></lightning-input><br>
+                    <!-- <lightning-input type="checkbox"  label="Active"  value={Active} onclick={InputHandler2}></lightning-input><br> -->
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="checkbox-unique-id-80">Active</label>
+                        <div class="slds-form-element__control">
+                        <span class="slds-checkbox slds-checkbox_standalone">
+                        <input type="checkbox" id="checkbox-unique-id-80" name="label" value="option" />
+                        <span class="slds-checkbox_faux"></span>
+                        </span>
+                        </div>
+                        </div><br>
+                    <Strong>Division : </Strong> {userDivision}<br>
+                    <lightning-textarea type="textarea"  label="Product Description"  value={ProductDescription} onchange={InputHandler3}></lightning-textarea><br>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" aria-label="Cancel and close"
+                        onclick={Canclebutton}>Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick={SaveButton}>Save</button>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+
+
+</template>

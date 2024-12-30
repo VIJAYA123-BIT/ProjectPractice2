@@ -1,0 +1,66 @@
+<template>
+    <div class="slds-var-around_small" style="display: inline-block">
+        <lightning-card title="calculator" >
+            <lightning-input value={userNumber} label="Enter the number"></lightning-input>
+            <lightning-input value={userResult} label="Result"></lightning-input>
+                <table class="slds-table   slds-table_cell-buffer">
+                    <tr class="slds-line-height-reset">
+                        <td>
+                            <lightning-button  label="1" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                            <lightning-button  label="2" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                            <lightning-button  label="3" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                            <lightning-button  variant="brand" label="+" onclick={handleClick}></lightning-button>
+                        </td>
+                    </tr>
+                    <tr class="slds-line-height-reset">
+                        <td>
+                                <lightning-button  label="4" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                                <lightning-button  label="5" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                                <lightning-button  label="6" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                                <lightning-button variant="brand" label="-" onclick={handleClick}></lightning-button>
+                        </td>
+                        </tr>
+                    <tr class="slds-line-height-reset">
+                        <td>
+                                <lightning-button  label="7" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                                <lightning-button  label="8" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                                <lightning-button  label="9" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                                <lightning-button variant="brand" label="*" onclick={handleClick}></lightning-button>
+                        </td>
+                    </tr>
+                    <tr class="slds-line-height-reset">
+                        <td>
+                                <lightning-button  label="CLR" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                                <lightning-button  label="0" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                                <lightning-button    variant="success" label="=" onclick={handleClick}></lightning-button>
+                        </td>
+                        <td>
+                                <lightning-button variant="brand" label="/" onclick={handleClick}></lightning-button>
+                        </td>
+                    </tr>
+                </table>
+        </lightning-card>
+    </div>
+</template>
